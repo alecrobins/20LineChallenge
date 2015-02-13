@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>20 Line Challenge</title>
+		<script src="jquery.min.js"></script>
+
+		<style>
+			.item {
+				float: left;
+				display: block;
+				width: 20px
+				height: 10px;
+				border: solid 1px black;
+
+			}
+
+			.it {
+				position: relative;
+		    float: left;
+				margin: 0;
+			}
+			.it img {
+				width: 20px;
+			}
+		/*
+			#imageTest:before{
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: rgba(0,255,255, 0.5);
+			} */
+
+		</style>
+	</head>
+	<body>
+		<h1>20 Line Challenge</h1>
+
+		<label>Image File:</label><br/>
+		<input type="file" id="imageLoader" name="imageLoader"/>
+		<canvas id="imageCanvas"></canvas>
+
+		<div id="newImage">
+
+		</div>
+
+		<button onclick="imgD()">Image Data</button>
+		<button onclick="getImages()">Image Search</button>
+
+		<script src="index.js"></script>
+
+
+	</body>
+</html>
