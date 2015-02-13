@@ -47,12 +47,18 @@ function imgD () {
 				// if( ((i/4) % 1 )== 0 ){
 					//getImages( "0px 20px rgba(" + imgData.data[i] + "," + imgData.data[i + 1] + "," + imgData.data[i + 2] + ", 0.8) inset");
 					var rgb = "0px 10px rgba(" + imgData.data[i] + "," + imgData.data[i + 1] + "," + imgData.data[i + 2] + ", 0.8) inset";
-					var uq = flickrData[curAtt].id + parseInt(Math.random()*1000);
+					var uq = flickrData[curAtt].id.toString();
+					uq = uq + parseInt(Math.random()*999999999).toString();
 					var cid = "#" + uq;
 					var imgSrc =  "url(https://farm" + flickrData[curAtt].farm + ".staticflickr.com/" + flickrData[curAtt].server +
 							"/" + flickrData[curAtt].id + "_" + flickrData[curAtt].secret+ "_s.jpg)";
 
-					console.log(curAtt);
+					console.log(i);
+
+					if( (i/4) % c.width == 0){
+						imgSrc = "cyan";
+						rgb = "none";
+					}
 
 					// $("#newImage").append("<div id='" + flickrData[curAtt].id + "' class='it' ><img src=' https://farm" + flickrData[curAtt].farm + ".staticflickr.com/" + flickrData[curAtt].server +
 					// "/" + flickrData[curAtt].id + "_" + flickrData[curAtt].secret+ "_s.jpg' /></div>");
@@ -67,7 +73,7 @@ function imgD () {
 						"height": "10px",
 						"background-size": "cover",
 						"box-shadow": rgb,
-					//	"background": imgSrc
+						"background": imgSrc
 					});
 
 					curAtt++;
