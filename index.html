@@ -34,7 +34,24 @@
 				background: rgba(0,255,255, 0.5);
 			} */
 
+			#MI div {
+				position: absolute;
+				z-index: 10 !important;
+			}
+
+			#MI div:hover {
+					width: 50px !important;
+					height: 50px !important;
+					position: absolute !important;
+					z-index: 999 !important;
+					-webkit-transition: all 1s ease;
+					-moz-transition: all 1s ease;
+					-o-transition: all 1s ease;
+					transition: all 1s ease;
+			}
+
 		</style>
+
 	</head>
 	<body>
 		<h1>20 Line Challenge</h1>
@@ -47,10 +64,13 @@
 
 		</div>
 
+		<input type="text" id="val" />
+
 		<button onclick="imgD()">Image Data</button>
 		<button onclick="getImages()">Image Search</button>
 
 		<script src="index.js"></script>
+
 
 
 	</body>
